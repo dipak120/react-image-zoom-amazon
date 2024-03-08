@@ -1,0 +1,42 @@
+.zoom-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .thumbnail-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .thumbnail {
+    width: 100px; /* Adjust thumbnail width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .zoomed-image-container {
+    position: absolute;
+    top: 0;
+    left: 110%; /* Position zoomed image beside thumbnail */
+    display: none;
+    overflow: hidden;
+  }
+  
+  .zoomed-image {
+    max-width: 300px; /* Adjust maximum width of zoomed image */
+    max-height: 300px; /* Adjust maximum height of zoomed image */
+    border: 1px solid #ccc; /* Example border */
+    background-color: #fff; /* Example background color */
+    padding: 5px; /* Example padding */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Example box shadow */
+    transition: transform 0.3s ease;
+  }
+  
+  .zoomed-image.zoomed {
+    transform: scale(2); /* Zoom effect */
+  }
+  
+  .thumbnail-container:hover + .zoomed-image-container,
+  .zoomed-image-container:hover {
+    display: block;
+  }
+  
